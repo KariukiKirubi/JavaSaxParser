@@ -14,7 +14,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class ReadXML extends DefaultHandler {
+public class patelAssigno6 extends DefaultHandler {
 
        private Account acct;
        private String temp;
@@ -31,7 +31,7 @@ public class ReadXML extends DefaultHandler {
               SAXParser sp = spfac.newSAXParser();
 
               //Create an instance of this class; it defines all the handler methods
-              ReadXML handler = new ReadXML();
+              patelAssigno6 handler = new patelAssigno6();
 
               //Finally, tell the parser to parse the input and notify the handler
               sp.parse("Bank.xml", handler);
