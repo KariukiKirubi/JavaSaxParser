@@ -1,11 +1,17 @@
 package PatelPackage;
 
+/*******************
+Akashkumar Patel
+CSCI 3020 Section W1
+Fall 2019
+Assignment 6
+This program does ......
+*******************/ 
 
-
-import patelAssign6.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -36,7 +42,10 @@ public class patelAssigno6 extends DefaultHandler {
 
               //Finally, tell the parser to parse the input and notify the handler
               sp.parse("legoSets.xml", handler);
-             
+              
+            //Display the welcome message and the data read successfully
+              System.out.println("Welcome to Lego Sorter");
+             System.out.println("XML data successfully read");
               handler.readList();
 
        }
@@ -84,7 +93,15 @@ public class patelAssigno6 extends DefaultHandler {
        }
 
        private void readList() {
-              System.out.println("No of  the LegoSet in bank '" + legsetList.size()  + "'.");
+            //Declare the variable o hold the string entered by the user and initialise it to numm t
+            String userInput=null;
+           //prompt the user to enter a word to search
+           System.out.println("Enter a search term ");
+           Scanner input=new Scanner(System.in);
+           userInput=input.next();
+           
+           
+           System.out.println("No of  the LegoSet  '" + legsetList.size()  + "'.");
               Iterator<LegoSet> it = legsetList.iterator();
               while (it.hasNext()) {
                     System.out.println(it.next().toString());
