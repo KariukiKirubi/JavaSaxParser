@@ -16,9 +16,9 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class ReadXML extends DefaultHandler {
 
-       private Account acct;
+       private Account_kk acct;
        private String temp;
-       private ArrayList<Account> accList = new ArrayList<Account>();
+       private ArrayList<Account_kk> accList = new ArrayList<Account_kk>();
 
        /** The main method sets things up for parsing */
        public static void main(String[] args) throws IOException, SAXException,
@@ -58,7 +58,7 @@ public class ReadXML extends DefaultHandler {
                      String qName, Attributes attributes) throws SAXException {
               temp = "";
               if (qName.equalsIgnoreCase("Account")) {
-                     acct = new Account();
+                     acct = new Account_kk();
                      acct.setType(attributes.getValue("type"));
 
               }
@@ -86,7 +86,7 @@ public class ReadXML extends DefaultHandler {
 
        private void readList() {
               System.out.println("No of  the accounts in bank '" + accList.size()  + "'.");
-              Iterator<Account> it = accList.iterator();
+              Iterator<Account_kk> it = accList.iterator();
               while (it.hasNext()) {
                     System.out.println(it.next().toString());
               }

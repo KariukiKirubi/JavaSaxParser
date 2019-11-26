@@ -60,7 +60,7 @@ public class patelAssigno6 extends DefaultHandler {
               temp = "";
               if (qName.equalsIgnoreCase("set")) {
                      legoset = new LegoSet();
-                     legoset.setsetNum(attributes.getValue("setNum"));
+                  //   legoset.setsetNum(attributes.getValue("set-num"));
 
               }
        }

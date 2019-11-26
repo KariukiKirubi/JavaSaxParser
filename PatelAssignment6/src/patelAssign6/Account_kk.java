@@ -1,16 +1,16 @@
 package patelAssign6;
 
-public class Account {
+public class Account_kk {
 
        private String name;
        private int id;
        private int amt;
        private String type;
 
-       public Account() {
+       public Account_kk() {
        }
 
-       public Account(String name, int id, int amt, String type) {
+       public Account_kk(String name, int id, int amt, String type) {
               this.name = name;
               this.amt = amt;
               this.id = id;
