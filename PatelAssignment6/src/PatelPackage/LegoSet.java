@@ -43,7 +43,7 @@ public class LegoSet {
               StringBuffer sb = new StringBuffer();
               
               sb.append("Set Num: " + getsetNum());
-              sb.append(" ");
+              sb.append("\n");
               sb.append("Name: " + getName());
              
              

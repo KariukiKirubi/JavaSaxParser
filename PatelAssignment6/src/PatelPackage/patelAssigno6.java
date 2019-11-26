@@ -44,7 +44,7 @@ public class patelAssigno6 extends DefaultHandler {
               sp.parse("legoSets.xml", handler);
               
             //Display the welcome message and the data read successfully
-              System.out.println("Welcome to Lego Sorter");
+              System.out.println("Welcome to Akashkumar Patel's Lego Sorter");
              System.out.println("XML data successfully read");
               handler.readList();
 
@@ -93,20 +93,44 @@ public class patelAssigno6 extends DefaultHandler {
        }
 
        private void readList() {
-            //Declare the variable o hold the string entered by the user and initialise it to numm t
+            //Declare the variable o hold the string entered by the user and initialise it to null
             String userInput=null;
            //prompt the user to enter a word to search
+           do{
            System.out.println("Enter a search term ");
            Scanner input=new Scanner(System.in);
            userInput=input.next();
            
+           if(userInput.equals("done")){
+           //Quit once keyword done has been entered
+            System.out.println("Thanks kk for using the Lego Sorter.\n" + "Bye!");
+          break; 
            
-           System.out.println("No of  the LegoSet  '" + legsetList.size()  + "'.");
-              Iterator<LegoSet> it = legsetList.iterator();
+           }else{
+             //convert all the string to uppercase if it is not the word done  
+          userInput=userInput.toUpperCase();
+                      
+          
+           String data; //variable to hold each data
+           //Display all the output that contains the keyword entered by the user
+           Iterator<LegoSet> it = legsetList.iterator();
               while (it.hasNext()) {
-                    System.out.println(it.next().toString());
+                  data=it.next().toString();
+                  if(data.contains(userInput)){
+                  System.out.println(data+"\n");
+              } else{
+                  
+                      }
+              
               }
+           }        
+           }while(userInput!="done"); //Keep prompting the user to enter a string till the word done is entered
+           
+         
        }
+       
+       //method to get input from user display on the screen
+      
       
 }
 
