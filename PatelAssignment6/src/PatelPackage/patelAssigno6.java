@@ -1,7 +1,8 @@
-package patelAssign6;
+package PatelPackage;
 
 
 
+import patelAssign6.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -59,7 +60,7 @@ public class patelAssigno6 extends DefaultHandler {
               temp = "";
               if (qName.equalsIgnoreCase("set")) {
                      legoset = new LegoSet();
-                     //legoset.setsetNum(attributes.getValue("setNum"));
+                     legoset.setsetNum(attributes.getValue("setNum"));
 
               }
        }
@@ -77,7 +78,7 @@ public class patelAssigno6 extends DefaultHandler {
               } else if (qName.equalsIgnoreCase("name")) {
                      legoset.setName(temp);
               } else if (qName.equalsIgnoreCase("set-num")) {
-                     legoset.setName(temp);
+                     legoset.setsetNum(temp);
               }
 
        }
